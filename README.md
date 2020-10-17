@@ -1,5 +1,6 @@
 # Back-EndRun on local host: localhost:3000
 
+
 ## **Endpoints**
 
 | Request | URL | Description | Requires Token |
@@ -8,7 +9,7 @@
 |POST | /login | login an existing user | N |
 |POST | /api/posts | add a new post | Y |
 |POST | /api/posts/:id/comments | add a new comment to a specific post | Y|
-
+|POST | /api/categories | add a new category | Y |
 |GET | /api/users | get all users | Y |
 |GET | /api/users/:id | get  user by id | Y |
 |GET | /api/posts | get all posts | Y |
@@ -16,6 +17,9 @@
 |GET | /api/posts/:id/comments | get comments of an post by id | Y|
 |GET | /api/posts/comments | get all comments | Y |
 |GET | /api/posts/comments/:id | get specific comment | Y |
+|GET | /api/categories | get all categories | Y |
+|GET | /api/categories/:id | get category by id | Y |
+|GET | /api/categories/:id/posts | get posts under a certain category | Y |
 |PUT | /api/users/:id | update a specific user by id | Y |
 |PUT | /api/posts/:id | update a specific post by id | Y|
 |PUT | /api/posts/comments/:id | update a specific comment by id | Y |
