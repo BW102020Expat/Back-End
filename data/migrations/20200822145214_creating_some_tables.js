@@ -18,15 +18,15 @@ exports.up = function(knex) {
             .onUpdate('CASCADE')
             .onDelete('CASCADE');
     })
-    .createTable('categories', tbl => {
-        tbl.increments('categoryId');
-        tbl.string('categoryName', 100).notNullable().unique();
-    });
+    // .createTable('categories', tbl => {
+    //     tbl.increments('categoryId');
+    //     tbl.string('categoryName', 100).notNullable().unique();
+    // });
 };
 
 exports.down = function(knex) {
     return knex.schema
-    .dropTableIfExists('categories')
+    // .dropTableIfExists('categories')
     .dropTableIfExists('posts')
     .dropTableIfExists('users');
 };
