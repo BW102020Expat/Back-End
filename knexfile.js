@@ -24,11 +24,8 @@ module.exports = {
   },
 
   production: {
-    client: 'sqlite3',
-    connection: {
-      filename: pgConnection
-    },
-    // in video, he did client pg, connection:pgConnection
+    client: 'pg',
+    connection: pgConnection,
     pool: {
       min: 2,
       max: 10
