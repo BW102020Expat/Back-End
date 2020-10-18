@@ -4,7 +4,7 @@ const cors = require('cors');
 
 const usersRouter = require('../users/users-router.js');
 const postsRouter = require('../posts/post-router.js');
-const categoriesRouter = require('../categories/categories-router');
+// const categoriesRouter = require('../categories/categories-router');
 const authRouter = require('../auth/auth-router.js');
 const authMiddleware = require('../auth/auth-middleware.js');
 
@@ -16,7 +16,7 @@ server.use(cors());
 
 server.use('/api/users', authMiddleware, usersRouter);
 server.use('/api/posts', authMiddleware, postsRouter);
-server.use('/api/categories', authMiddleware, categoriesRouter);
+// server.use('/api/categories', authMiddleware, categoriesRouter);
 server.use('/', authRouter);
 
 server.get('/', (req, res) => {

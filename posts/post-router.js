@@ -67,7 +67,7 @@ router.delete('/:id', validatePostId, (req, res) => {
 router.get('/:id/comments', validatePostId, (req, res) => {
     const id = req.params.id;
 
-    Post.findCommentsFromPost(id)
+    Post.findCommentsFrompost(id)
         .then(comments => {
             res.status(200).json(comments);
         })
@@ -107,7 +107,7 @@ function validatePostId(req, res, next) {
 function validatePostInput(req, res, next) {
     const post = req.body;
 
-    if(post.title === undefined || post.description === undefined || post.categoryId === undefined) {
+    if(post.title === undefined || post.description === undefined) {
         res.status(404).json({ message: "Title, description, and/or categoryId are missing" });
     }
     else {
