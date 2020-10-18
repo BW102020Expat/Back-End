@@ -12,15 +12,15 @@ module.exports = {
 
 function find() {
     return db('post')
-    .join("categories", "categories.categoryId", "=", "post.categoryId")    
-    .select("post.postId", "post.title", "post.description", "post.imageURL", "post.categoryId", "categories.categoryName")
+    // .join("categories", "categories.categoryId", "=", "post.categoryId")    
+    .select("post.postId", "post.title", "post.description", "post.imageURL")
     .orderBy("post.postId")
 }; 
 
 function findById(id) {
     return db('post').where({ postId: id }).first()
-    .join("categories", "categories.categoryId", "=", "post.categoryId")      
-    .select("post.postId", "post.title", "post.description", "post.imageURL", "post.categoryId", "categories.categoryName");
+    // .join("categories", "categories.categoryId", "=", "post.categoryId")      
+    .select("post.postId", "post.title", "post.description", "post.imageURL");
 };
 
 function add(post) {
