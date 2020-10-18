@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/dbExpat";
+const pgConnection = process.env.DATABASE_URL || "postgres://xwrsnfcejdtegn:80da53d53ef4627460fc9bece79550fbc486c0fad335e15174a40443cb9bb2d6@ec2-54-157-234-29.compute-1.amazonaws.com:5432/dc6qh4nlu1ee2l";
 
 module.exports = {
 
@@ -26,7 +26,7 @@ module.exports = {
   production: {
     client: 'sqlite3',
     connection: {
-      filename: './data/prodDbExpat.db3'
+      filename: pgConnection
     },
     // in video, he did client pg, connection:pgConnection
     pool: {
