@@ -58,6 +58,6 @@
 
 ## **Login**
 If you need to login before you make a POST request to add a new user with the signup form, you can use the following login info:
-|Username | Password | Email |
+|Username | Password |
 |------|------|------|
-|test | pass123 | test@gmail.com|
+|user1 | pass1 | 
