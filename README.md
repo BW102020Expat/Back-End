@@ -1,6 +1,4 @@
-# Back-EndRun on local host: localhost:3000
-
-
+# Back-EndRun on https://expatjournalbw1020.herokuapp.com/
 ## **Endpoints**
 
 | Request | URL | Description | Requires Token |
