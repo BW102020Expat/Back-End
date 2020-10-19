@@ -4,7 +4,7 @@ exports.up = function(knex) {
     .createTable('comments', tbl => {
         tbl.increments('commentId');
         tbl.string('comment').notNullable();
-        tbl.integer('postID');
+        tbl.integer('postId');
     });
 };
 
