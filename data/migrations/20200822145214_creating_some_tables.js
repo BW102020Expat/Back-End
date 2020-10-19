@@ -8,7 +8,7 @@ exports.up = function(knex) {
         tbl.string('email', 100).notNullable().unique();
     })
     .createTable('post', tbl => {
-        tbl.increments('postID');
+        tbl.increments('postId');
         tbl.string('title', 200).notNullable();
         tbl.string('description', 500).notNullable();
         tbl.string('imageURL');
