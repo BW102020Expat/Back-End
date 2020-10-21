@@ -46,7 +46,6 @@
 |title | string | yes | no | Title of post |
 |description | string | yes | no | Description of post |
 |imageURL | string | no | no | Optional image url of post |
-
 |username | string | no | no | Foreign key references username in users tbl |
 
 ## **Comments**

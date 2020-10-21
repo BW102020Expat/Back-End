@@ -12,7 +12,7 @@ router.post('/signup', validateUser, doesUserExist, (req, res) => {
     const userInfo = req.body;
 
     if(isValid(userInfo)) {
-        const rounds = process.env.BCRYPT_ROUNDS || 4;
+        const rounds = process.env.BCRYPT_ROUNDS || 6;
 
         const hash = bcrypt.hashSync(userInfo.password, rounds);
         

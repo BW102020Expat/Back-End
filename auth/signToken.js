@@ -6,7 +6,7 @@ module.exports = (user) => {
         username: user.username
     }
 
-    const secret = "dontbesuspicious";
+    const secret = "secretsecretigotasecret";
 
     const options = {
         expiresIn: '7d'
