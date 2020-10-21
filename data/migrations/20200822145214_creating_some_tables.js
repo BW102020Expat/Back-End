@@ -21,6 +21,7 @@ exports.up = function(knex) {
     .createTable('comments', tbl => {
         tbl.increments('commentId');
         tbl.string('comment').notNullable();
+        tbl.string('username', 100);
         tbl.integer('postId')
             .references('postId')
             .inTable('post')
