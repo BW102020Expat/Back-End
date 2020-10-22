@@ -13,14 +13,14 @@ module.exports = {
 function find() {
     return db('post')
     // .join("categories", "categories.categoryId", "=", "post.categoryId")    
-    .select("post.postId", "post.title", "post.description", "post.imageURL")
+    .select("post.postId", "post.title", "post.description", "post.imageURL, post.username")
     .orderBy("post.postId")
 }; 
 
 function findById(id) {
     return db('post').where({ postId: id }).first()
     // .join("categories", "categories.categoryId", "=", "post.categoryId")      
-    .select("post.postId", "post.title", "post.description", "post.imageURL");
+    .select("post.postId", "post.title", "post.description", "post.imageURL, post.username");
 };
 
 function add(post) {
